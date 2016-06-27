@@ -1,0 +1,109 @@
+body {
+  background: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 50px 200px;
+}
+
+.collaborators-container { 
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  font-weight: 300;
+  position: relative;
+  color: #000;
+  counter-reset: thang;
+}
+
+.collaborators-container:after {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+}
+
+.achievements {
+  background-color: #fff;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: #89b8cf; 
+  position: relative;
+  box-shadow: inset 0px 0px 0px 5px #89b8cf;
+  font-weight: 600;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 0 0;
+  font-size: 1.1em;
+}
+
+.achievements::after {
+  counter-increment: thang;
+  content: counter(thang);
+  color: #89b8cf;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 0.94em;
+  line-height: 30px;
+  font-weight: 500;
+  text-align: center;
+  position: absolute;
+  right: 2px;
+  bottom: 3px;
+}
+
+.achievements::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  bottom: 0px;
+  display: block;
+  background: #fff;
+  width: 42px;
+  height: 25px;
+  border-right: 5px solid #89b8cf;
+  border-bottom: 5px solid #89b8cf;
+  border-left: 5px solid #89b8cf;
+  border-top: 1px solid transparent;
+  border-radius: 0 0px 60px 60px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.achievements-ico {
+  width: 64px;
+  height: 48px;
+  position: absolute;
+  display: block;
+  background: url('../../img/spr-ico.png') no-repeat;
+  background-position: 2px 0px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.list-collaborators {
+  margin: 0 0 20px 0;
+}
+
+.list-collaborators:nth-child(2) .achievements-ico {
+  background-position: -65px 0px;
+}
+
+.list-collaborators:nth-child(2) .achievements {
+  box-shadow: inset 0px 0px 0px 5px #b09eb7;
+}
+
+.list-collaborators:nth-child(2) .achievements::after {
+  color: #b09eb7;
+}
+
+.list-collaborators:nth-child(2) .achievements::before {
+  border-right-color: #b09eb7;
+  border-bottom-color: #b09eb7;
+  border-left-color: #b09eb7;
+}
+
+
