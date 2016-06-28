@@ -23,4 +23,5 @@ module.exports = function() {
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/styles'))
     .pipe(connect.reload({stream: true}));
+
 };
